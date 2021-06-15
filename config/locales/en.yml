@@ -1,0 +1,9 @@
+en:
+  base_title: "Friend Coff"
+  main_title: "Welcome"
+  data-text: "Ready"
+  home:
+    home_index: "Home"
+    study_index: "Study"
+    order_index: "Order"
+    about_index: "About"
