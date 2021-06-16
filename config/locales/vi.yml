@@ -1,0 +1,9 @@
+vi:
+  base_title: "Friend Coff"
+  main_title: "Xin chào"
+  data-text: "Ready"
+  home:
+    home_index: "Trang chủ"
+    study_index: "Học tập"
+    order_index: "Một chút cafe"
+    about_index: "Xem thêm"
