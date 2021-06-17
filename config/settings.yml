@@ -2,9 +2,15 @@ user:
   validation:
     name_max: 50
     email_max: 255
+    pass_min: 8
   format:
     email: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
+users_helper:
+  size_img: 50
 product:
   validation:
     name_product: 50
     info: 255
+cart_item:
+  validation:
+    greater: 0

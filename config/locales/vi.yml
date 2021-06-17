@@ -7,3 +7,30 @@ vi:
     study_index: "Học tập"
     order_index: "Một chút cafe"
     about_index: "Xem thêm"
+  header:
+    login: "Đăng nhập"
+    logout: "Đăng xuất"
+    signup_index: "Đăng ký"
+  footer:
+    text: "bởi Sub"
+  user:
+    text: "Người dùng"
+    profile: "Thông tin"
+    change_info: "Thay đổi thông tin"
+    signup:
+      subtitle: "Đăng ký"
+  error:
+    text: "Có"
+    error: "lỗi"
+  flash:
+    not_found_user: "Không tìm thấy người dùng"
+    save_success: "Thành công"
+    save_error: "Đã xảy ra lỗi"
+  signup:
+    submit: "Tạo tài khoản"
+    or: "Nếu đã có tài khoản"
+    login_site: "Đăng nhập"
+    name: "Tên"
+    email: "Email"
+    password: "Mật khẩu"
+    password_cf: "Xác nhận mật khẩu"

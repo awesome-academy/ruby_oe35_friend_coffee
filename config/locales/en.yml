@@ -7,3 +7,30 @@ en:
     study_index: "Study"
     order_index: "Order"
     about_index: "About"
+  header:
+    login: "Login"
+    logout: "Logout"
+    signup_index: "Signup"
+  footer:
+    text: "by Sub"
+  user:
+    text: "User"
+    profile: "Profile"
+    change_info: "Change infor"
+    signup:
+      subtitle: "Sign up"
+  error:
+    text: "Have"
+    error: "error"
+  flash:
+    not_found_user: "Not found user"
+    save_success: "Create successfully"
+    save_error: "Something wrong"
+  signup:
+    submit: "Create an account"
+    or: "If already have account"
+    login_site: "Log In"
+    name: "Name"
+    email: "Email"
+    password: "Password"
+    password_cf: "Password confirmation"

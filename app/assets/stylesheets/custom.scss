@@ -1,0 +1,61 @@
+@import 'color';
+@import 'bootstrap';
+@import 'bootstrap-sprockets';
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+.signup {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  box-shadow: 0 0 3px 0 rgba(00,0,0,0.3);
+  background: #fff;
+
+  h1 {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 40px 0;
+    color: black;
+  }
+
+  .signup-form {
+    font-size: 15px;
+    margin: 15px 0;
+    color: black;
+    padding: 15px 10px;
+  }
+
+  .submit {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .form-control {
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px;
+    outline: none;
+  }
+
+  p {
+    text-align: center;
+    font-size: 20px;
+  }
+}
