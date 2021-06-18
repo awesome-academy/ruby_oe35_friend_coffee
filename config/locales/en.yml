@@ -19,6 +19,8 @@ en:
     change_info: "Change infor"
     signup:
       subtitle: "Sign up"
+    signin:
+      subtitle: "Sign in"
   error:
     text: "Have"
     error: "error"
@@ -34,3 +36,12 @@ en:
     email: "Email"
     password: "Password"
     password_cf: "Password confirmation"
+  signin:
+    submit: "Sign In"
+    or: "If you have no account"
+    signup_site: "Sign up now!"
+    remember: "Remember me"
+    flash:
+      danger: "Login fail"
+      success: "Login successfully"
+    signout: "Sign out"

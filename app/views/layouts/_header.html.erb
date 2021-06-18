@@ -5,6 +5,25 @@
       <%= link_to t("home.home_index"), friendcoff_path %>
       <%= link_to t("home.about_index"), about_path %>
       <%= link_to t("header.signup_index"), signup_path %>
+      <% if logged_in? %>
+        <li><%= link_to t("user.text"), users_path %></li>
+        <li class="dropdown">
+          <%= link_to "#", class: "dropdown-toggle", "data-toggle": "dropdown" do %>
+            <%= current_user.name %>
+            <b class="caret"></b>
+          <% end %>
+          <ul class="dropdown-menu">
+            <li><%= link_to t("user.profile"), current_user %></li>
+            <li><%= link_to t("user.change_info"), "#" %></li>
+            <li class="divider"></li>
+            <li>
+              <%= link_to t("signin.signout"), signout_path, method: :delete %>
+            </li>
+          </ul>
+        </li>
+      <% else %>
+        <li><%= link_to t("signup.login_site"), signin_path %></li>
+      <% end %>
     </a>
   </div>
 </header>
