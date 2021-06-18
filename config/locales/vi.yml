@@ -19,6 +19,8 @@ vi:
     change_info: "Thay đổi thông tin"
     signup:
       subtitle: "Đăng ký"
+    signin:
+      subtitle: "Đăng nhập"
   error:
     text: "Có"
     error: "lỗi"
@@ -34,3 +36,12 @@ vi:
     email: "Email"
     password: "Mật khẩu"
     password_cf: "Xác nhận mật khẩu"
+  signin:
+    submit: "Đăng nhập"
+    or: "Nếu bạn chưa có tài khoản"
+    signup_site: "Đăng ký ngay!"
+    remember: "Ghi nhớ tài khoản"
+    flash:
+      danger: "Đăng nhập thất bại"
+      success: "Đăng nhập thành công"
+    signout: "Đăng xuất"

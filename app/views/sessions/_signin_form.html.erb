@@ -1,0 +1,20 @@
+<%= form_for(:session, url: signin_path) do |f| %>
+  <%= f.label :email, t("signup.email") %>
+  <%= f.email_field :email, class: "form-control" %>
+  <%= f.label :password, t("signup.password") %>
+  <%= f.password_field :password, class: "form-control" %>
+  <%= f.label :remember_me, class: "checkbox inline" do %>
+    <%= f.check_box :remember_me %>
+    <%= t "signin.remember" %>
+  <% end %>
+  <div class="submit">
+    <%= f.submit t("signin.submit"), class: "btn btn-primary" %>
+  </div>
+  <hr>
+  <p class="or">
+    <%= t "signin.or" %>
+    <p>
+      <%= link_to t("signin.signup_site"), signup_path %>
+    </p>
+  </p>
+<% end %>
