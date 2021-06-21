@@ -28,6 +28,10 @@ en:
     not_found_user: "Not found user"
     save_success: "Create successfully"
     save_error: "Something wrong"
+    update_done: "Update successfull"
+    fail: "Have some wrong"
+    destroy_done: "Delete successfully"
+    destroy_fail: "Delete fail"
   signup:
     submit: "Create an account"
     or: "If already have account"
@@ -36,6 +40,10 @@ en:
     email: "Email"
     password: "Password"
     password_cf: "Password confirmation"
+    flash:
+      check_activate: "Please check your mail to final signup"
+      activate_done: "Complete activation account"
+      activate_fail: "Something wrong"
   signin:
     submit: "Sign In"
     or: "If you have no account"
@@ -45,3 +53,23 @@ en:
       danger: "Login fail"
       success: "Login successfully"
     signout: "Sign out"
+    forget_pass:
+      title: "Forget password"
+      submit: "Reset Password"
+      edit: "New password"
+      text1: "Already take a new password"
+      text2: "Best regards,"
+      flash_infor: "Check your mail to reset password"
+      flash_danger: "Have some wrong to reset password"
+      flash_empty: "Pass should not empty"
+      flash_success: "Change password successfully"
+      flash_expired: "Need change pass in 2 hours"
+  mailer:
+    activation:
+      title: "Activate Account"
+      hello: "Hello"
+      welcome: "Welcome to my friend coff"
+      active: "Active"
+    sending:
+      subject_activate: "Activate account"
+      subject_password: "Reset password"

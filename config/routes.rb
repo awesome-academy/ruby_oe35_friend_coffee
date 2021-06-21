@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
-    root "style_pages#home"
+    root "main_pages#home"
     get "/friendcoff", to: "main_pages#home"
     get "/about", to: "main_pages#about"
 
@@ -11,5 +11,7 @@ Rails.application.routes.draw do
     delete "/signout", to: "sessions#destroy"
 
     resources :users, only: %i(new create show)
+    resources :account_activations, only: :edit
+    resources :password_resets, expect: %i(index show destroy)
   end
 end
