@@ -6,8 +6,11 @@ user:
   format:
     email: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
   index_page: 15
+home:
+  path_img: "logo.jpg"
 users_helper:
   size_img: 50
+  size_img1: 35
 product:
   validation:
     name_product: 50

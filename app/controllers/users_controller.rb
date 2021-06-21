@@ -72,7 +72,7 @@ class UsersController < ApplicationController
 
     store_location
     flash[:danger] = t "flash.not_found_user"
-    redirect_to login_url
+    redirect_to signin_url
   end
 
   def correct_user

@@ -73,3 +73,9 @@ vi:
     sending:
       subject_activate: "Xác thực tài khoản"
       subject_password: "Đặt lại mật khẩu"
+  admin:
+    destroy_user:
+      delete: "Xóa"
+      cf_delete: "Bạn có chắc chắn xóa?"
+    manager:
+      text: "Quản lý"
