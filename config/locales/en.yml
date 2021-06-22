@@ -73,3 +73,9 @@ en:
     sending:
       subject_activate: "Activate account"
       subject_password: "Reset password"
+  admin:
+    destroy_user:
+      delete: "Delete"
+      cf_delete: "Are you sure?"
+    manager:
+      text: "Manager"

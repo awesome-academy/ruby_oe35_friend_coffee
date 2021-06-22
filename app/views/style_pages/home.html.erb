@@ -1,13 +1,11 @@
 <% provide :title, t("main_title") %>
-<div class="main">
-  <ul>
-    <li>
-      <a data-text = <%= t("data-text") %>>
-        <%= link_to t("home.home_index"), friendcoff_path %>
-        <%= link_to t("home.study_index"), "#" %>
-        <%= link_to t("home.order_index"), "#" %>
-        <%= link_to t("home.about_index"), about_path %>
-      </a>
-    </li>
-  </ul>
-</div>
+<section id="banner">
+  <div class="banner-text">
+    <h1> Friend Coffee <h1>
+    <p>Just chill and relax with your style</p>
+    <div class="banner-btn">
+      <%= link_to t("home.home_index"), friendcoff_path %>
+      <%= link_to t("home.study_index"), "#" %>
+    </div>
+  </div>
+</section>
