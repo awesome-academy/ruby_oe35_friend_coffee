@@ -1,0 +1,13 @@
+<div class="product-img">
+  <%= image_tag product.display_image if product.image.present? %>
+</div>
+<div class="product-item">
+  <%= product.name %>
+  <%= product.price %>
+  <%= link_to t("product.show_info"), products_path %>
+  <%= form_for @cart_item, remote: true do |f| %>
+    <%= f.hidden_field :product_id, value: product.id %>
+    <%= f.number_field :quantity, value: Settings.number.value, min: Settings.number.min %>
+    <%= f.submit t("product.add_cart") %>
+  <% end %>
+</div>

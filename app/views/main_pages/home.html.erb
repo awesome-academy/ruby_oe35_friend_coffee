@@ -9,3 +9,160 @@
     </div>
   </div>
 </section>
+<section class="browse-places">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3> Browse Places </h3>
+      </div>
+    </div>
+  </div>
+  <div class="container-items">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="owl-carousel">
+          <div class="item">
+            <%= image_tag "coffee.png", class: "carousel-icon" %>
+          </div>
+          <div class="place">
+            <h4> Coffee More </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="owl-carousel">
+          <div class="item">
+            <%= image_tag "drink.png", class: "carousel-icon" %>
+          </div>
+          <div class="place">
+            <h4> Tea </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="owl-carousel">
+          <div class="item">
+            <%= image_tag "cake.png", class: "carousel-icon" %>
+          </div>
+          <div class="place">
+            <h4> Cakes </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="owl-carousel">
+          <div class="item">
+            <%= image_tag "open.png", class: "carousel-icon" %>
+          </div>
+          <div class="place">
+            <h4> Open </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="owl-carousel">
+          <div class="item">
+            <%= image_tag "even.png", class: "carousel-icon" %>
+          </div>
+          <div class="place">
+            <h4> Event </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="order-table">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="new-heading">
+          <h1><%= t "home.text1" %></h1>
+        </div>
+        <div class="all-items">
+          <div class="search col-lg-4 col-md-6 col-sm-12 col-xs-12">
+            <form>
+              <input class="search-location" name="search" type="search" placeholder="What your choice?" />
+              <div class="icon-btn">
+                <div class="cross-icon">
+                  <i class="fas fa-crosshairs"></i>
+                </div>
+                <div class="s-m-btn">
+                  <button class="search-meal-btn btn-link"><%= t "product.search" %></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <%= render partial: "product", collection: @products %>
+      <div class="d-flex justify-content-center mt-3">
+        <%= paginate @products, theme: "twitter-bootstrap-3" %>
+      </div>
+      <div class="show-all-btn">
+        <%= link_to "Show All", products_path, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container-fluid padding">
+  <div class="row welcome text-center">
+    <div class="col-12">
+      <h1 class="display-4"><%= t "home.text2" %></h1>
+    </div>
+    <hr>
+    <div class="col-12">
+      <p><%= t "home.text3" %></p>
+    </div>
+  </div>
+</div>
+<div class="container-fluid padding">
+  <div class="row text-center padding">
+    <div class="col-xs-12 col-sm-6 col-md-4 ">
+      <i class="fas fa-home"></i>
+      <h3>Coffee</h3>
+      <p>Greating coffee, tea and cake</p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <i class="fas fa-home"></i>
+      <h3>Chill</h3>
+      <p>Chill with your friend, order and drink</p>
+    </div>
+    <div class="col-sm-12 col-md-4">
+      <i class="fas fa-home"></i>
+      <h3>Study</h3>
+      <p>Update coming</p>
+    </div>
+  </div>
+  <hr class="my-4">
+</div>
+<div class="container-fluid padding">
+  <div class="row padding">
+    <div class="col-md-12 col-lg-6">
+      <h2><%= t "home.about" %></h2>
+      <p><%= t "home.text_long" %></p>
+      <p><%= t "home.text_long2" %></p>
+      <br>
+    </div>
+    <div class="col-lg-6">
+      <%= image_tag "banner3.jpg" %>
+    </div>
+  </div>
+</div>
+<hr class="my-2">
+<div class="container-fluid padding">
+  <div class="row text-center padding">
+    <div class="col-12">
+      <h2><%= t "home.contact" %></h2>
+    </div>
+    <div class="col-12 social padding">
+      <a href="https://www.facebook.com/subronz22/"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-google-plus-g"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</div>

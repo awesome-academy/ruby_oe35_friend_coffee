@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
     if user.activated?
       log_in user
       params[:session][:remember_me] == "1" ? remember(user) : forget(user)
-      redirect_to user
+      redirect_back_or user
     else
       flash[:danger] = t "signin.flash.danger"
       redirect_to root_url
