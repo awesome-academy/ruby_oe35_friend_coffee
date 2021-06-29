@@ -1,29 +1,30 @@
-<section id="banner">
-  <div class="banner-text">
-    <h1> Friend Coffee <h1>
-        <p>Order somthing make you feel better - RIGHT NOW</p>
-  </div>
-</section>
-<div class="container">
-  <h2 class="lg-title"><%= t "product.all_product" %></h2>
-  <p class="text-light"><%= t "product.product_title" %></p>
-  <div class="product-items">
-    <div class="product">
-      <%= render partial: "product", collection: @products %>
-      <div class="d-flex justify-content-center mt-3">
-      <%= paginate @products, theme: "twitter-bootstrap-3" %>
+<p id="notice"><%= notice %></p>
+<div class="products">
+  <div class="container">
+    <h1 class="lg-title"><%= t "product.all_product" %></h2>
+    <p class="text-light"><%= t "product.product_title" %></p>
+    <div class="product-items">
+      <div class="product">
+        <%= render partial: "product", collection: @products %>
+        <div class="d-flex justify-content-center mt-3">
+        <%= paginate @products, theme: "twitter-bootstrap-3" %>
+        </div>
       </div>
     </div>
   </div>
+</div>
+<div class="row">
   <div class="product-collection">
     <div class="container">
       <div class="product-collection-wrapper">
-        <div class=product-col-left flex>
-          <div class="product-col-content">
-            <h2 class="sm-title">Friend Coffee</h2>
-            <h2 class="md-title">Study with hangout online</h2>
-            <p class="text-light">It is the idea for the environment studying</p>
-            <button type="button" class="btn-dark">Shop Now</button>
+        <div class="col-md-6">
+          <div class="product-col-left flex">
+            <div class="product-col-content">
+              <h2 class="sm-title">Friend Coffee</h2>
+              <h2 class="md-title">Study with hangout online</h2>
+              <p class="text-light">It is the idea for the environment studying</p>
+              <button type="button" class="btn-dark">Shop Now</button>
+            </div>
           </div>
         </div>
         <div class="product-col-right">

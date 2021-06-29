@@ -8,7 +8,7 @@ user:
   index_page: 15
 home:
   path_img: "logo.jpg"
-  page: 4
+  page: 6
   info: 255
 users_helper:
   size_img: 50

@@ -1,0 +1,4 @@
+$("#delete-cart-item").html("<%= j render "carts/cart" %>")
+$("#quantity-cart-item").html("<%= current_cart.cart_items.count %>")
+$("#cart-total-amount").html("<%= current_cart.total_amount %>")
+$("#notice").html("<%= j render"shared/flash" %>");

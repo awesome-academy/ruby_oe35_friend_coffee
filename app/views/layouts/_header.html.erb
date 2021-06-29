@@ -36,10 +36,8 @@
           <li><%= link_to t("header.signup_index"), signup_path %> /
           <li><%= link_to t("signup.login_site"), signin_path %></li>
         <% end %>
-        <li class="quantity-cart-item">
-          <%= link_to carts_path do %>
-            <i class="fas fa-shopping-cart"></i><%= t "header.cart" %>|<%= "#{current_cart.cart_items.count}" %>
-          <% end %>
+        <li id="cart">
+          <%= render "shared/count_cart" %>
         </li>
       </ul>
     </nav>

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     get "/signin", to: "sessions#new"
     post "/signin", to: "sessions#create"
     get "/signout", to: "sessions#destroy"
-    resources :products, only: :index
+    resources :products, only: %i(index show)
     resources :carts
     resources :cart_items
     resources :categories, only: %i(index show) do

@@ -1,0 +1,22 @@
+<section id="banner-product">
+  <div class="banner-text">
+    <h1> Friend Coffee <h1>
+        <p>Detail product</p>
+  </div>
+</section>
+<div class="product-img">
+  <%= image_tag @product.display_image %>
+</div>
+<p id="notice"><%= notice %></p>
+<p>
+  <strong><%= t "product.name" %></strong>
+  <%= @product.name %>
+</p>
+<p>
+  <strong><%= t "product.price" %></strong>
+  <%= @product.price %>
+</p>
+<p>
+  <strong><%= t "product.information" %></strong>
+  <%= @product.information %>
+</p>

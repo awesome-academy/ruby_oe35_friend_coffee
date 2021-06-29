@@ -1,13 +1,35 @@
-<div class="product-img">
-  <%= image_tag product.display_image if product.image.present? %>
-</div>
-<div class="product-item">
-  <%= product.name %>
-  <%= product.price %>
-  <%= link_to t("product.show_info"), products_path %>
-  <%= form_for @cart_item, remote: true do |f| %>
-    <%= f.hidden_field :product_id, value: product.id %>
-    <%= f.number_field :quantity, value: Settings.number.value, min: Settings.number.min %>
-    <%= f.submit t("product.add_cart") %>
-  <% end %>
+<div class="col-sm-6">
+  <div class="product-content">
+    <div class="product-img">
+      <%= link_to image_tag(product.display_image), product %>
+    </div>
+    <div class="product-btn">
+      <%= form_for @cart_item, remote: true do |f| %>
+        <%= f.hidden_field :product_id, value: product.id %>
+        <%= f.number_field :quantity, value: Settings.number.value, min: Settings.number.min, class: "btn-cart" %>
+        <p>
+          <%= f.submit t("product.add_cart"), class: "btn-cart" %>
+          <span><i class="fas fa-plus"></i></span>
+        </p>
+      <% end %>
+    </div>
+    <div class="product-info-top">
+      <h2 class="sm-title"><%= t "product.voted" %></h2>
+      <div class="rating">
+        <% 4.times do %>
+          <span><i class="fas fa-star"></i></span>
+        <% end %>
+        <span><i class="far fa-star"></i></span>
+      </div>
+    </div>
+    <div class="product-info">
+      <h2 class="product-name"><%= product.name %></h2>
+      <% if product.old_price.present? %>
+        <strike>
+          <span class="product-old-price">$<%= product.old_price %></span>
+        </strike>
+      <% end %>
+      <p class="product-price"><%= product.price %>$</p>
+    </div>
+  </div>
 </div>

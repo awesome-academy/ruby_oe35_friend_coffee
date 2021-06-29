@@ -15,7 +15,6 @@ html, body {
   width: 100%;
   height: 100%;
   font-family: 'Gamja Flower';
-  font-size: 15px;
   color: black;
 }
 
@@ -30,6 +29,12 @@ section {
   height: 100vh;
 }
 
+#banner-product {
+  background: linear-gradient(rgba(0,0,0,0.5), #768347), url('banner4.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 55vh;
+}
 .logo {
   width: 170px;
   position: absolute;
@@ -69,6 +74,7 @@ section {
 
 #error_explanation {
   color: red;
+  position: relative;
 
   ul {
     color: red;
@@ -233,7 +239,7 @@ h1,h2,h3,h4,h5 {
 }
 
 .search-meal-btn {
-  padding: 15px 20px;
+  padding: 8px 20px;
   color: #fff;
   background: #ffa803;
   font-size: 14px;
@@ -241,6 +247,10 @@ h1,h2,h3,h4,h5 {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
   cursor: pointer;
+}
+
+.new-heading {
+  text-align: center;
 }
 
 .btn-link {

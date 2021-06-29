@@ -1,7 +1,9 @@
-<div class="col-4">
-  <div class="product-img">
-    <%= image_tag product.display_image %>
+<div class="col-sm-4">
+  <div class="product">
+    <div class="product-img">
+      <%= image_tag product.display_image if product.image.present? %>
+    </div>
+    <p class="product-name"><%= t "product.name" %><%= product.name %></p>
+    <p class="product-name"><%= t "product.price" %>$<%= product.price %></p>
   </div>
-  <p><%= t "product.name" %><%= product.name %></p>
-  <p><%= t "product.price" %>$<%= product.price %></p>
 </div>

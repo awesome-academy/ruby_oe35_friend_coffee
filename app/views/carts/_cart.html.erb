@@ -1,0 +1,25 @@
+<% if @cart_items.blank? %>
+  <h3 style="text-align: center;"><%= t "cart.empty_item" %></h3>
+<% else %>
+  <div class="container">
+    <h2><%= t "cart.my_cart" %></h2>
+    <div class="table">
+      <table class="table">
+        <thead class="thead-dark">
+          <th scope="col"><%= t "cart.image" %></th>
+          <th scope="col"><%= t "product.name" %></th>
+          <th scope="col"><%= t "product.price" %></th>
+          <th scope="col"><%= t "product.quantity" %></th>
+          <th scope="col"><%= t "cart.action" %></th>
+        </thead>
+      </table>
+      <tbody>
+        <%= render partial: "cart_item", collection: @cart_items %>
+      </tbody>
+    </div>
+  </div>
+  <div class="amount">
+    <h2 id="cart-total-amount"><%= t "cart.total_amount" %> <%= current_cart.total_amount %>$</h2>
+  </div>
+    <%= link_to t("cart.checkout"), "#", class: "btn btn-primary" %>
+<% end %>
