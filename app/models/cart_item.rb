@@ -1,6 +1,8 @@
 class CartItem < ApplicationRecord
-  belongs_to :product, optional: true
+  belongs_to :product
   belongs_to :cart, optional: true
+
+  CARTITEM_ATTRS = %i(quantity product_id).freeze
 
   validates :quantity, presence: true,
     numericality:

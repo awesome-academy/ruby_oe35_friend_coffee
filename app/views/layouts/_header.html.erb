@@ -7,6 +7,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to t("home.home_index"), friendcoff_path %>
         <li><%= link_to t("home.about_index"), about_path %>
+        <li><%= link_to t("home.product_index"), products_path %></li>
         <% if logged_in? %>
           <% if admin_user? %>
             <li><%= link_to t("user.text"), users_path %></li>
@@ -27,7 +28,7 @@
               <li><%= link_to t("user.change_info"), "#" %></li>
               <li class="divider"></li>
               <li>
-                <%= link_to t("signin.signout"), signout_path, method: :delete %>
+                <%= link_to t("signin.signout"), signout_path %>
               </li>
             </div>
           </li>
@@ -35,6 +36,11 @@
           <li><%= link_to t("header.signup_index"), signup_path %> /
           <li><%= link_to t("signup.login_site"), signin_path %></li>
         <% end %>
+        <li class="quantity-cart-item">
+          <%= link_to carts_path do %>
+            <i class="fas fa-shopping-cart"></i><%= t "header.cart" %>|<%= "#{current_cart.cart_items.count}" %>
+          <% end %>
+        </li>
       </ul>
     </nav>
   </div>

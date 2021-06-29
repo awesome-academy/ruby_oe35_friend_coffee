@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_21_094216) do
+ActiveRecord::Schema.define(version: 2021_06_29_015358) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "name", null: false
@@ -40,6 +40,9 @@ ActiveRecord::Schema.define(version: 2021_06_21_094216) do
     t.bigint "cart_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.decimal "unit_price", precision: 10
+    t.decimal "total", precision: 10
+    t.integer "category_id"
     t.index ["cart_id"], name: "index_cart_items_on_cart_id"
     t.index ["product_id"], name: "index_cart_items_on_product_id"
   end
@@ -64,24 +67,15 @@ ActiveRecord::Schema.define(version: 2021_06_21_094216) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "order_items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.bigint "product_id", null: false
-    t.bigint "order_id", null: false
-    t.decimal "unit_price", precision: 12, scale: 3
-    t.integer "quantity"
-    t.decimal "total_price", precision: 12, scale: 3
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["order_id"], name: "index_order_items_on_order_id"
-    t.index ["product_id"], name: "index_order_items_on_product_id"
-  end
-
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.decimal "subtotal", precision: 10
-    t.decimal "total", precision: 10
+    t.decimal "order_price", precision: 10
     t.integer "order_status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
+    t.bigint "cart_id", null: false
+    t.index ["cart_id"], name: "index_orders_on_cart_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
@@ -114,7 +108,5 @@ ActiveRecord::Schema.define(version: 2021_06_21_094216) do
   add_foreign_key "cart_items", "carts"
   add_foreign_key "cart_items", "products"
   add_foreign_key "carts", "users"
-  add_foreign_key "order_items", "orders"
-  add_foreign_key "order_items", "products"
   add_foreign_key "products", "categories"
 end

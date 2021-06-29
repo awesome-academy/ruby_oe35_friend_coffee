@@ -1,20 +1,32 @@
-<section id="footer">
-  <div class="title-text">
-    <h1>CONTACT</h1>
-    <h1>FRIEND COFFEE</h1>
-  </div>
-  <div class="footer-row">
-    <div class="footer-left">
-      <h1>Opening Hours</h1>
-      <p>Monday to Friday - 8am to 8pm</p>
-      <p>Saturday and Sunday - 9am to 12pm</p>
+<footer>
+  <div class="container-fluid padding">
+    <div class="row text-center">
+      <div class="col-md-4">
+        <%= image_tag "logo2.jpg", class: "logo_footer" %>
+        <hr class="light">
+        <p><%= t "footer.address" %></p>
+        <p><%= t "footer.email" %></p>
+        <p><%= t "footer.phone" %></p>
+      </div>
+      <div class="col-md-4">
+        <hr class="light">
+        <h5><%= t "footer.working_hours" %></h5>
+        <hr class="light">
+        <p><%= t "footer.in_week" %></p>
+        <p><%= t "footer.in_week2" %></p>
+      </div>
+      <div class="col-md-4">
+        <hr class="light">
+        <h5><%= t "footer.service" %></h5>
+        <hr class="light">
+        <p><%= t "footer.payment" %></p>
+        <p><%= t "footer.order_table" %></p>
+        <p><%= t "footer.ship" %></p>
+      </div>
+      <div class="col-12">
+        <hr class="light-100">
+        <h5>&copy; <%= t "footer.copyright" %>|<%= t "footer.text" %></h5>
+      </div>
     </div>
-    <div class="footer-right">
-      <h1>Get in touch</h1>
-      <p>59/39 Me Tri, HaNoi, VietNam</p>
-      <p>Email: contact.sub22@gmail.com</p>
-      <p>Phone: 0976808174</p>
-    </div>
   </div>
-  <h2>&copy; Copyright</h2>
-</section>
+</footer>

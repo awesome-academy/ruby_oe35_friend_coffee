@@ -8,6 +8,8 @@ user:
   index_page: 15
 home:
   path_img: "logo.jpg"
+  page: 4
+  info: 255
 users_helper:
   size_img: 50
   size_img1: 35
@@ -15,8 +17,15 @@ product:
   validation:
     name_product: 50
     info: 255
+  page: 5
 cart_item:
   validation:
     greater: 0
 reset_pass:
   expired: 2
+product:
+  size_img: 200
+img_file: [image/jpeg, image/gif, image/png]
+number:
+  value: 1
+  min: 1

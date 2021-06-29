@@ -1,11 +1,18 @@
 class Product < ApplicationRecord
   belongs_to :category
   has_many :cart_items, dependent: :destroy
-  has_many_attached :images
+  has_one_attached :image
 
-  validates :name_product, presence: true,
-    length: {maximim: Settings.product.validation.name_product}
+  PRODUCT_ATTRS = %i(name price information).freeze
+
   validates :price, presence: true, numericality: true
   validates :information, presence: true,
-    length: {maximum: Settings.product.validation.info}
+    length: {maximum: Settings.home.info}
+
+  delegate :name, :image, to: :category, allow_nil: true, prefix: true
+
+  def display_image
+    image.variant(resize_to_limit:
+      [Settings.product.size_img, Settings.product.size_img]).processed
+  end
 end
