@@ -1,14 +1,4 @@
 <% provide :title, t("main_title") %>
-<section id="banner">
-  <div class="banner-text">
-    <h1> Friend Coffee <h1>
-    <p>Just chill and relax with your style</p>
-    <div class="banner-btn">
-      <%= link_to t("home.home_index"), friendcoff_path %>
-      <%= link_to t("home.study_index"), "#" %>
-    </div>
-  </div>
-</section>
 <section class="browse-places">
   <div class="container">
     <div class="row">
@@ -84,11 +74,13 @@
             <form>
               <input class="search-location" name="search" type="search" placeholder="What your choice?" />
               <div class="icon-btn">
-                <div class="cross-icon">
-                  <i class="fas fa-crosshairs"></i>
-                </div>
                 <div class="s-m-btn">
-                  <button class="search-meal-btn btn-link"><%= t "product.search" %></button>
+                  <button class="search-meal-btn btn-link">
+                    <%= t "product.search" %>
+                    <span>
+                      <i class="fas fa-crosshairs"></i>
+                    </span>
+                  </button>
                 </div>
               </div>
             </form>
@@ -98,9 +90,6 @@
     </div>
     <div class="row">
       <%= render partial: "product", collection: @products %>
-      <div class="d-flex justify-content-center mt-3">
-        <%= paginate @products, theme: "twitter-bootstrap-3" %>
-      </div>
       <div class="show-all-btn">
         <%= link_to "Show All", products_path, class: "btn btn-primary" %>
       </div>
@@ -112,7 +101,7 @@
     <div class="col-12">
       <h1 class="display-4"><%= t "home.text2" %></h1>
     </div>
-    <hr>
+    <hr class="light">
     <div class="col-12">
       <p><%= t "home.text3" %></p>
     </div>

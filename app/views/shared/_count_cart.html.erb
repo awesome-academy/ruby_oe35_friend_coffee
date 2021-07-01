@@ -1,0 +1,7 @@
+<%= link_to carts_path do %>
+  <i class="fas fa-shopping-cart"></i>
+  <%= t "header.cart" %>|
+  <strong id="quantity-cart-item">
+    <%= current_cart.cart_items.count %>
+  </strong>
+<% end %>
