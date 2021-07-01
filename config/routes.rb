@@ -1,6 +1,20 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
     root "main_pages#home"
+
+    namespace :admin do
+      root "main_pages#dashboard"
+      get "signin", to: "sessions#new"
+      post "signin", to: "sessions#create"
+      get "signout", to: "sessions#destroy"
+
+      resources :products, only: :index
+      resources :users
+      resources :categories do
+        resources :products
+      end
+    end
+
     get "/friendcoff", to: "main_pages#home"
     get "/about", to: "main_pages#about"
     get "/signup", to: "users#new"

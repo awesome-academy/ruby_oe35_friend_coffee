@@ -1,0 +1,22 @@
+<div class="product">
+  <h2><%= t "product.all_product" %></h2>
+  <div class="table">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <td>ID</td>
+          <td><%= t "product.name" %></td>
+          <td><%= t "product.information" %></td>
+          <td><%= t "product.price" %></td>
+          <td><%= t "product.old_price" %></td>
+          <td><%= t "cart.action" %></td>
+        </tr>
+      </thead>
+      <tbody>
+        <% @products.each_with_index  do |product, index| %>
+          <%= render "product", product: product, index: index %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
