@@ -1,0 +1,20 @@
+@import 'bootstrap';
+@import 'bootstrap-sprockets';
+
+#admin {
+  text-align: center;
+
+  .new-heading {
+    padding-top: 30px;
+  }
+
+  .fas fa-edit{
+    text-decoration: none;
+    color: black;
+  }
+
+  .far fa-trash-alt {
+    text-decoration: none;
+    color: black;
+  }
+}

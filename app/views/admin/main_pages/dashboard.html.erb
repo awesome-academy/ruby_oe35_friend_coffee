@@ -1,0 +1,69 @@
+<%= provide :title, t("admin.title") %>
+<section class="content">
+  <div class="container-fuild">
+    <div class="row">
+      <div class="col-lg-3 col-6">
+        <div class="small-box bg-info">
+          <div class="inner">
+            <h3><%= Category.all.count %></h3>
+            <p><%= t "admin.category_count" %></p>
+          </div>
+          <div class="icon">
+            <i class="icon icon-bag"></i>
+          </div>
+          <%= link_to admin_categories_path, class:"small-box-footer" do %>
+            <%= t "admin.more_info" %> <i class="fas fa-arrow-circle-right"></i>
+          <% end %>
+        </div>
+      </div>
+      <!-- col1 -->
+      <div class="col-lg-3 col-6">
+        <div class="small-box bg-success">
+          <div class="inner">
+            <h3><%= Product.all.count %></h3>
+            <p><%= t "product.all_product" %></p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-stats-bars"></i>
+          </div>
+          <%= link_to admin_products_path, class: "small-box-footer" do %>
+            <%= t "admin.more_info" %>
+            <i class="fas fa-arrow-circle-right"></i>
+          <% end %>
+        </div>
+      </div>
+      <!-- coll2 -->
+      <div class="col-lg-3 col-6">
+        <div class="small-box bg-warning">
+          <div class="inner">
+            <h3><%= User.all.count %></h3>
+            <p><%= t "admin.user_count" %></p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-person-add"></i>
+          </div>
+          <a href="#" class="small-box-footer">
+            <%= t "admin.more_info" %>
+            <i class="fas fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+      <!-- col3 -->
+      <div class="col-lg-3 col-6">
+        <div class="small-box bg-danger">
+          <div class="inner">
+            <h3><%= current_cart.total_amount %></h3>
+            <p><%= t "admin.total_amount" %></p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-pie-graph"></i>
+          </div>
+          <a href="#" class="small-box-footer">
+            <%= t "admin.more_info" %>
+            <i class="fas fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

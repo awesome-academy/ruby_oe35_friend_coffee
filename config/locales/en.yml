@@ -95,12 +95,6 @@ en:
     sending:
       subject_activate: "Activate account"
       subject_password: "Reset password"
-  admin:
-    destroy_user:
-      delete: "Delete"
-      cf_delete: "Are you sure?"
-    manager:
-      text: "Manager"
   cart:
     empty_item: "Have no item in cart"
     my_cart: "My Cart"
@@ -114,6 +108,7 @@ en:
     product_title: "Order something you want"
     name: "Product Name "
     price: "Price "
+    old_price: "Old Price"
     quantity: "Quantity"
     information: "Information"
     show_info: "Show"
@@ -121,3 +116,14 @@ en:
     search: "Search"
     detail_title: "Detail view"
     voted: "Voted"
+  admin:
+    title: "Admin Manager"
+    total_amount: "Total Amount"
+    user_count: "User Registrations"
+    category_count: "Categories"
+    more_info: "More Info"
+    destroy_user:
+      delete: "Delete"
+      cf_delete: "Are you sure?"
+    manager:
+      text: "Manager"

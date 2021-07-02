@@ -95,12 +95,6 @@ vi:
     sending:
       subject_activate: "Xác thực tài khoản"
       subject_password: "Đặt lại mật khẩu"
-  admin:
-    destroy_user:
-      delete: "Xóa"
-      cf_delete: "Bạn có chắc chắn xóa?"
-    manager:
-      text: "Quản lý"
   cart:
     empty_item: "Không có đơn hàng nào"
     my_cart: "Giỏ hàng"
@@ -114,6 +108,7 @@ vi:
     product_title: "Hãy chọn cho mình những ly coffee"
     name: "Tên sản phẩm "
     price: "Giá "
+    old_price: "Giá cũ"
     quantity: "Số lượng"
     information: "Thông tin mô tả"
     show_info: "Xem"
@@ -121,3 +116,14 @@ vi:
     search: "Tìm kiếm"
     detail_title: "Chi tiết sản phẩm"
     voted: "Đánh giá"
+  admin:
+    title: "Admin Quản lý"
+    total_amount: "Tổng thu nhập"
+    user_count: "Người dùng đăng ký"
+    category_count: "Số lượng danh mục"
+    more_info: "Xem thêm"
+    destroy_user:
+      delete: "Xóa"
+      cf_delete: "Bạn có chắc chắn xóa?"
+    manager:
+      text: "Quản lý"
