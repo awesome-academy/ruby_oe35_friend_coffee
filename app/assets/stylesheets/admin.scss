@@ -1,11 +1,22 @@
 @import 'bootstrap';
 @import 'bootstrap-sprockets';
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-size: cover;
+  font-family: sans-serif;
+}
+
 #admin {
   text-align: center;
 
   .new-heading {
-    padding-top: 30px;
+    padding-top: 40px;
   }
 
   .fas fa-edit{
@@ -17,4 +28,23 @@
     text-decoration: none;
     color: black;
   }
+}
+
+.login-wrapper {
+  height: 45vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  padding: 20px 30px 20px;
+  background: rgba(0,0,0,0.7);
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.5);
 }

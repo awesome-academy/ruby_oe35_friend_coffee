@@ -4,11 +4,11 @@ Rails.application.routes.draw do
 
     namespace :admin do
       root "main_pages#dashboard"
-      get "signin", to: "sessions#new"
-      post "signin", to: "sessions#create"
-      get "signout", to: "sessions#destroy"
-
-      resources :products, only: :index
+      get "signin", to: "admin_sessions#new"
+      post "signin", to: "admin_sessions#create"
+      get "signout", to: "admin_sessions#destroy"
+      resources :categories
+      resources :products
       resources :users
       resources :categories do
         resources :products

@@ -3,7 +3,7 @@ class Product < ApplicationRecord
   has_many :cart_items, dependent: :destroy
   has_one_attached :image
 
-  PRODUCT_ATTRS = %i(name price information).freeze
+  PRODUCT_ATTRS = %i(category_id name price old_price information image).freeze
 
   validates :price, presence: true, numericality: true
   validates :information, presence: true,

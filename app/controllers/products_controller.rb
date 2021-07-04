@@ -6,19 +6,7 @@ class ProductsController < ApplicationController
     @cart_item = current_cart.cart_items.new
   end
 
-  def new
-    @product = Product.new
-  end
-
   def show; end
-
-  def create
-    @product = Product.new product_params
-  end
-
-  def update; end
-
-  def destroy; end
 
   private
 
@@ -28,9 +16,5 @@ class ProductsController < ApplicationController
 
     flash.now[:danger] = "Not found product"
     redirect_to root_path
-  end
-
-  def product_params
-    params.require(:product).permit Product::PRODUCT_ATTRS
   end
 end
