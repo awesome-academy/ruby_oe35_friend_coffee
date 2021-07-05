@@ -106,6 +106,7 @@ vi:
   product:
     all_product: "Tất cả sản phẩm"
     product_title: "Hãy chọn cho mình những ly coffee"
+    category: "Danh mục"
     name: "Tên sản phẩm "
     price: "Giá "
     old_price: "Giá cũ"
@@ -116,6 +117,15 @@ vi:
     search: "Tìm kiếm"
     detail_title: "Chi tiết sản phẩm"
     voted: "Đánh giá"
+    image_field: "Lựa chọn hình ảnh"
+    add_new: "Tạo sản phẩm mới"
+    edit_info: "Sửa đổi"
+    create_new: "Tạo sản phẩm"
+    placeholder:
+      name: "Nhập tên sản phẩm"
+      infor: "Giới thiệu về sản phẩm"
+      price: "Giá"
+      old_price: "Giá cũ"
   admin:
     title: "Admin Quản lý"
     total_amount: "Tổng thu nhập"
@@ -127,3 +137,4 @@ vi:
       cf_delete: "Bạn có chắc chắn xóa?"
     manager:
       text: "Quản lý"
+      login_admin: "Đăng nhập Admin"

@@ -1,5 +1,6 @@
+<div class="notice"><%= notice %></div>
 <div class="product">
-  <h2><%= t "product.all_product" %></h2>
+  <h2 class="new-heading"><%= t "product.all_product" %></h2>
   <div class="table">
     <table class="table">
       <thead class="thead-dark">
@@ -13,10 +14,12 @@
         </tr>
       </thead>
       <tbody>
-        <% @products.each_with_index  do |product, index| %>
-          <%= render "product", product: product, index: index %>
-        <% end %>
+        <%= render partial: "product", collection: @products %>
       </tbody>
     </table>
+  </div>
+  <%= paginate @products, theme: "twitter-bootstrap-3" %>
+  <div>
+    <%= link_to t("product.add_new"), new_admin_product_path, class: "btn btn-primary" %>
   </div>
 </div>

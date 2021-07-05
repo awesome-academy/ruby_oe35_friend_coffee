@@ -11,7 +11,7 @@
         <% if logged_in? %>
           <% if admin_user? %>
             <li><%= link_to t("user.text"), users_path %></li>
-            <li><%= link_to t("admin.manager.text"), "#" %></li>
+            <li><%= link_to t("admin.manager.text"), admin_root_url %></li>
           <% end %>
           <li class="dropdown">
             <%= link_to "#", class: "dropdown-toggle", "data-toggle": "dropdown" do %>

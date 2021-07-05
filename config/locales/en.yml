@@ -106,6 +106,7 @@ en:
   product:
     all_product: "All products"
     product_title: "Order something you want"
+    category: "Category"
     name: "Product Name "
     price: "Price "
     old_price: "Old Price"
@@ -116,6 +117,15 @@ en:
     search: "Search"
     detail_title: "Detail view"
     voted: "Voted"
+    image_field: "Choice your image"
+    add_new: "Add new product"
+    edit_info: "Edit Info"
+    create_new: "Create product"
+    placeholder:
+      name: "Enter name product"
+      infor: "Enter some word to description"
+      price: "Enter price"
+      old_price: "Enter old_price"
   admin:
     title: "Admin Manager"
     total_amount: "Total Amount"
@@ -127,3 +137,4 @@ en:
       cf_delete: "Are you sure?"
     manager:
       text: "Manager"
+      login_admin: "Login Admin"

@@ -29,3 +29,5 @@ img_file: [image/jpeg, image/gif, image/png]
 number:
   value: 1
   min: 1
+admin:
+  product_page: 10

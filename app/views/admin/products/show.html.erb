@@ -1,0 +1,40 @@
+<div class="container bootdey">
+  <div class="col-md-12">
+    <section class="panel">
+      <div class="panel-body">
+        <div class="col-md-6">
+          <div class="pro-img-details">
+            <%= image_tag @product.display_image if @product.image.present? %>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h4 class="pro-d-title">
+            <strong>
+              <%= t "product.information" %>
+            </strong>
+          </h4>
+          <p>
+            <%= @product.information %>
+          </p>
+          <div class="product_meta">
+            <span class="posted_in">
+              <strong><%= t "product.category" %>:
+            </strong>
+            <%= @product.category_name %>
+          </div>
+          <div class="m-bot15">
+            <strong>
+              <%= t "product.price" %>
+            </strong>
+            $<%= @product.price %><br />
+            <strong class="amount-old">
+              <%= t "product.old_price" %>
+            </strong>
+            <span class="pro-price">$<%= @product.old_price %></span>
+          </div>
+          <%= link_to t("product.edit_info") , edit_admin_product_path(@product), class: "btn btn-primary" %>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

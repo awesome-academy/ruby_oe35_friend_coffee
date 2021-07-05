@@ -1,8 +1,10 @@
 <div class="col-sm-6">
   <div class="product-content">
     <div class="product-img">
-      <%= link_to image_tag(product.display_image), product %>
-    </div>
+      <% if product.image.present? %>
+        <%= link_to image_tag(product.display_image), product %>
+      <% end %>
+      </div>
     <div class="product-btn">
       <%= form_for @cart_item, remote: true do |f| %>
         <%= f.hidden_field :product_id, value: product.id %>

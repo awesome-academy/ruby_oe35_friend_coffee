@@ -1,0 +1,13 @@
+<div class="login-wrapper">
+  <%= form_for(:session, url: admin_signin_path) do |f| %>
+    <div class="input-group">
+      <%= f.label :email, t("signup.email") %>
+      <%= f.text_field :email, class: "form-control" %>
+    </div>
+    <div class="input-group">
+      <%= f.label :password, t("signup.password") %>
+      <%= f.password_field :password, class: "form-control" %>
+    </div>
+    <%= f.submit t("admin.manager.login_admin"), class: "btn btn-primary" %>
+  <% end %>
+</div>
