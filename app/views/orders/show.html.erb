@@ -1,0 +1,9 @@
+<h2><%= t "order.text_success" %></h2>
+<p>
+  <%= link_to t("order.text_history"), user_path(current_user.id) %>
+</p>
+<p>
+  <%= link_to t("order.text2"), user_path(current_user.id) %>
+</p>
+<%= link_to t("home.home_index"), root_path, class: "btn btn-primary" %>
+<%= link_to t("home.study_index"), "#", class: "btn btn-primary" %>
