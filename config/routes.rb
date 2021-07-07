@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     resources :products, only: %i(index show)
     resources :carts
     resources :cart_items
+    resources :orders
     resources :categories, only: %i(index show) do
       resources :products, only: %i(index show)
     end

@@ -7,6 +7,8 @@ class CartItem < ApplicationRecord
   CARTITEM_ATTRS = %i(quantity product_id).freeze
   scope :order_item, ->{order created_at: :desc}
 
+  delegate :name, :price, to: :product, allow_nil: true, prefix: true
+
   validates :quantity, presence: true,
     numericality:
     {only_integer: true, greater_than: Settings.cart_item.validation.greater}

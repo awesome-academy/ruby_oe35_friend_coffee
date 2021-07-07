@@ -1,0 +1,83 @@
+<% provide :title, t("order.title") %>
+<div class="container">
+  <div class="title">
+    <h2><%= t "order.title" %></h2>
+  </div>
+  <div class="d-flex">
+    <%= form_for @order do |f| %>
+      <div class="form-group">
+        <%= f.label :cart_id, value: current_cart.id %>
+        <%= f.hidden_field :cart_id, value: current_cart.id %>
+        <%= f.label :name, value: current_user.name %>
+      </div>
+      <div class="form-group">
+        <%= f.label :address, t("order.address") %><span class="required">*</span>
+        <%= f.text_field :address, required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.label :city, t("order.city") %><span class="required">*</span>
+        <%= f.text_field :city, required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.label :phone, t("order.phone") %><span class="required">*</span>
+        <%= f.text_field :phone, required: true %>
+      </div>
+      <%= f.submit t("order.order"), class: "btn btn-primary" %>
+    <% end %>
+    <div class="Yorder">
+      <table>
+        <tr>
+          <th colspan="2">
+            <h5>
+              <%= t "order.text_order" %>
+              <i class="fas fa-shopping-cart"></i>(<span><%= current_cart.products.count %></span>)
+              <%= link_to t("product.edit_info"), carts_path, class: "btn btn-primary" %>
+            </h5>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <% @cart_items.each do |cart_item| %>
+              <div class="col-sm-9">
+                <b><%= cart_item.quantity %> x <span><%= cart_item.product_name %></b>
+              </div>
+              <div class="col-md-3">
+                <p>$<%= cart_item.total.to_f %></p>
+              </div>
+              <hr>
+            <% end %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="col-md-9">
+              <b><%= t "cart.total_amount" %></b>
+            </div>
+          </td>
+          <td>
+            <div class="col-md-3">
+              <b>$<%= current_cart.total_amount %></b>
+            </div>
+          </td>
+        </tr>
+      </table><br>
+      <div>
+        <input type="radio" name="dbt" value="dbt" checked> Direct Bank Transfer
+      </div>
+      <p>
+        Make your payment directly into our bank account.
+        Please use your Order ID as the payment reference.
+        Your order will not be shipped until the funds have cleared in our account.
+      </p>
+      <div>
+        <input type="radio" name="dbt" value="cd"> Cash on Delivery
+      </div>
+      <div>
+        <input type="radio" name="dbt" value="cd"> Paypal
+        <span>
+          <img src="https://www.logolynx.com/images/logolynx/c3/c36093ca9fb6c250f74d319550acac4d.jpeg" alt="" width="50">
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

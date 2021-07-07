@@ -101,6 +101,7 @@ vi:
     total_amount: "Tổng -  "
     checkout: "Đặt hàng"
     text: "Tổng giá trị đơn hàng của bạn"
+    total_amount: "Tổng giá trị"
     image: "Hình ảnh"
     action: "Hành động"
   product:
@@ -126,6 +127,18 @@ vi:
       infor: "Giới thiệu về sản phẩm"
       price: "Giá"
       old_price: "Giá cũ"
+  order:
+    title: "Thanh toán"
+    payment1: "1. Thanh toán trực tiếp"
+    payment2: "2. Thanh toán qua card"
+    text_order: "Giỏ hàng"
+    address: "Địa chỉ"
+    city: "Thành phố"
+    phone: "Điện thoại"
+    order: "Đặt hàng ngay"
+    text_sucess: "Bạn đã đặt hàng thành công"
+    text2: "Bạn có muốn mua gì nữa không?"
+    text_history: "Xem lịch sử"
   admin:
     title: "Admin Quản lý"
     total_amount: "Tổng thu nhập"

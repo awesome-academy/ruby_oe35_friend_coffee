@@ -101,6 +101,7 @@ en:
     total_amount: "Total Amount - "
     checkout: "Checkout Now!"
     text: "Your current cart value has a total amount of"
+    total_amount: "Total Amount"
     image: "Image"
     action: "Action"
   product:
@@ -126,6 +127,18 @@ en:
       infor: "Enter some word to description"
       price: "Enter price"
       old_price: "Enter old_price"
+  order:
+    title: "Checkout Order"
+    payment1: "1. Direct payment"
+    payment2: "2. Payment via Card"
+    text_order: "Your order"
+    address: "Address"
+    city: "City"
+    phone: "Phone"
+    order: "Order Now"
+    text_sucess: "Order successfully"
+    text2: "Do you want to continue order"
+    text_history: "View order history"
   admin:
     title: "Admin Manager"
     total_amount: "Total Amount"

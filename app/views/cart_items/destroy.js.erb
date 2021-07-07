@@ -1,4 +1,6 @@
-$("#delete-cart-item").html("<%= j render "carts/cart" %>")
+$(".delete-cart-item").bind("ajax:success", function() {
+  $(this).closest("tr").fadeOut();
+});
 $("#quantity-cart-item").html("<%= current_cart.cart_items.count %>")
 $("#cart-total-amount").html("<%= current_cart.total_amount %>")
 $("#notice").html("<%= j render"shared/flash" %>");
